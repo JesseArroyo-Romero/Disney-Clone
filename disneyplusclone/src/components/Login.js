@@ -4,6 +4,12 @@ const Login = (props) => {
     return (
         <Container>
             <Content>
+                <CTA>
+                    <CTALogoOne src="/images/cta-logo-one.svg" alt="Logo-One" />
+                    <SignUp>GET THE DISNEY BUNDLE</SignUp>
+                    <Description>Stream Now</Description>
+                    <CTALogoTwo src="/images/cta-logo-two.png" alt="Logo-Two" />
+                </CTA>
                 <BgImage />
             </Content>
         </Container>
@@ -43,6 +49,62 @@ const BgImage = styled.div`
     right: 0;
     left: 0;
     z-index: -1
+`;
+
+const CTA = styled.div`
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    transition-timing-function: ease-out;
+    transition: opacity 0.2s;
+    width: 100%;
+`;
+
+const CTALogoOne = styled.img`
+    margin-bottom: 12px;
+    max-width: 600px;
+    min-height: 1px;
+    display: block;
+    width: 100%
+`;
+
+const SignUp = styled.a`
+    font-weight: bold;
+    color: #f9f9f9;
+    background-color: #0063e5;
+    margin-bottom: 12px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    padding: 16.5px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #0483ee;
+    }
+`;
+
+const Description = styled.p`
+    color: hsla(0, 0%, 95.3%, 1);
+    font-size: 11px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+`;
+
+const CTALogoTwo = styled.img`
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
 `;
 
 export default Login;
